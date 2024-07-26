@@ -2,7 +2,7 @@
 <p>There is three roles(with Permissions) and 1 Customer with SSLCOMMERZ Payment System</p>
 <br>
 
-![Screenshot](backend/images/screenshots/SAAS_SV_ECOMMERCE.png)
+![Screenshot](public/backend/images/screenshots/SAAS_SV_ECOMMERCE.png)
 
 <br>
 <p>
@@ -72,7 +72,12 @@ SMS_SENDER_ID =xxxxxxxxxxxxxxxxxx <br>
 SMS_API_KEY =xxxxxxxxxxxxxxxxxxxx <br>
 <br><br>
 </p>
-
+<br>
+<h6> Localhost Realtime Data (Commandline) </h6>
+<p>
+php artisan reverb:start<br>
+php artisan queue:work<br>
+</p>
 
 
 <br>
