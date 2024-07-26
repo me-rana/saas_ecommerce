@@ -9,7 +9,7 @@ Route::group([
     'middleware' => 'api',
     'prefix' => 'v1'
 ], function () {
-    //Register Input(name,phone and password)
+    //Register Input(name,phone,email and password)
     Route::post('/register', [CustomerController::class, 'register'])->name('register');
     //Login Input(phone and password)
     Route::post('/login', [CustomerController::class, 'login'])->name('login');
@@ -44,20 +44,26 @@ Route::group([
     Route::post('/logout', [CustomerController::class, 'logout'])->name('logout');
     Route::post('/refresh', [CustomerController::class, 'refresh'])->name('refresh');
     Route::get('/profile', [CustomerController::class, 'profile'])->name('profile');
+    //Input('name','email','district','area','address')
     Route::post('/update-profile', [CustomerController::class,'updateProfile'])->name('update_profile');
     Route::post('/change-password', [CustomerController::class, 'changePassword'])->name('change_password');
 
     //Cart Management
+    //Input("product_id" : "1","qty" : "1")
     Route::post('/add-to-cart',[CustomerController::class,'addToCart'])->name('Add to Cart');
     Route::get('/carts',[CustomerController::class, 'carts'])->name('Carts');
+    //Input("cart_id" : "26")
     Route::post('/cart-increment',[CustomerController::class, 'cartIncrement'])->name('Cart Increment');
+    //Input("cart_id" : "26")
     Route::post('/cart-decrement',[CustomerController::class, 'cartDecrement'])->name('Cart Decrement');
+    //Input("cart_id" : "26")
     Route::post('/cart-remove',[CustomerController::class, 'cartRemove'])->name('Cart Remove');
     Route::get('/cart-clear',[CustomerController::class, 'cartClear'])->name('Cart Clear');
     
     //Cart Orders
     Route::post('/place-order',[CustomerController::class,'placeOrder'])->name('Place Order');
     Route::get('/order-list',[CustomerController::class, 'orderList'])->name('Order List');
+    //Input('order_id')
     Route::post('/order-details',[CustomerController::class, 'orderDetails'])->name('Order Details');
 });
 
