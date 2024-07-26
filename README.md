@@ -1,7 +1,9 @@
 <center><h4><strong>SAAS ECOMMERCE SINGLE VENDOR</strong></h4></center>
 <p>There is three roles(with Permissions) and 1 Customer with SSLCOMMERZ Payment System</p>
 <br>
+
 ![Screenshot](backend/images/screenshots/SAAS_SV_ECOMMERCE.png)
+
 <br>
 <p>
 <b><u>Management</u></b> <br>
