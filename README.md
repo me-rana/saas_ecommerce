@@ -1,7 +1,7 @@
 <center><h4><strong>SAAS ECOMMERCE SINGLE VENDOR</strong></h4></center>
 <p>There is three roles(with Permissions) and 1 Customer with SSLCOMMERZ Payment System</p>
 <br>
-
+![Screenshot](backend/images/screenshots/SAAS_SV_ECOMMERCE.png)
 <br>
 <p>
 <b><u>Management</u></b> <br>
@@ -64,11 +64,14 @@ VITE_REVERB_SCHEME="${REVERB_SCHEME}" <br>
 GOOGLE_CLIENT_ID=xxxxxxxxxxxxxxxxxx <br>
 GOOGLE_CLIENT_SECRET=xxxxxxxxxxxxxxxxxx <br>
 GOOGLE_REDIRECT_URL="http://127.0.0.1:8000/api/v1/auth/google/callback" <br>
+
+SMS_URL =xxxxxxxxxxxxxxxxxx <br>
+SMS_SENDER_ID =xxxxxxxxxxxxxxxxxx <br>
+SMS_API_KEY =xxxxxxxxxxxxxxxxxxxx <br>
 <br><br>
-
-
-
 </p>
+
+
 
 <br>
 <br>
