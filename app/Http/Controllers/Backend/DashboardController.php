@@ -19,7 +19,12 @@ class DashboardController extends Controller
         $sales_yearly = Order::whereYear('created_at', date('Y'))->sum('total_amount');
         $purchase_monthly = OrderDetail::whereMonth('created_at',date('m'))->whereYear('created_at', date('Y'))->sum('purchase_price');
         $orders = Order::whereMonth('created_at',date('m'))->whereYear('created_at', date('Y'))->count();
-        $profit = round(($sales_monthly - $purchase_monthly) / $orders, 0);
+        if($sales_monthly > 0){
+        	$profit = round(($sales_monthly - $purchase_monthly) / $orders, 0);
+        }
+        else{
+        	$profit = 0;
+        }
 
         // Fetching orders for the last 7 days or user-supplied range
         $graphStartDate = Carbon::today()->subDays(6);

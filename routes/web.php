@@ -5,7 +5,6 @@ use App\Events\DashManager;
 use App\Events\NotifyEvent;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ProductController;
@@ -17,10 +16,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/job-start',function(){
-    Artisan::call('queue:work');
-    return "Job Started!";
+Route::get('/run-queue', function () {
+    \Illuminate\Support\Facades\Artisan::call('queue:work');
+    return 'Queue worker started';
 });
+
 
 Route::get('/testing',function(){
     // event(new DashbEvent());
